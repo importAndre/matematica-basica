@@ -1,0 +1,186 @@
+% Use the command pdflatex hello.tex on cmd to create the pdf file
+
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc} % Codificação de caracteres
+\usepackage[brazil]{babel} % Suporte para Português Brasil
+\usepackage{amsmath}        % Para fórmulas matemáticas
+\usepackage{geometry}       % Para definir as margens
+\usepackage{times}          % Usa a fonte Times, geralmente aceita pelas normas ABNT
+
+% Definição das margens de acordo com a ABNT
+\geometry{
+a4paper,
+left=3cm,
+right=2cm,
+top=3cm,
+bottom=2cm
+}
+
+\begin{document}
+\begin{titlepage} % Cria uma página de título
+\begin{center}
+\vspace*{\fill} % Centraliza verticalmente o título
+\Huge Introdução à Matemática % \Huge é o maior tamanho de fonte disponível
+\vspace*{\fill}
+\end{center}
+
+\begin{flushright}
+% Adiciona o nome no canto inferior direito
+\normalsize André Luiz Roberti Cardoso % \normalsize para voltar ao tamanho normal de fonte
+\end{flushright}
+
+\thispagestyle{empty} % Remove a numeração da página
+\end{titlepage}
+
+% Insere o sumário
+\tableofcontents
+\newpage % Começa o conteúdo em uma nova página após o sumário
+
+\section{Introdução} % Seção principal
+
+\subsection{Frações e Equações} % Subseção dentro de Introdução
+
+\subsubsection{Axiomas} % Subsubseção dentro de Frações e Equações
+
+Toda a matemática se baseia em Axiomas. \\
+Axiomas são verdades que não precisam ser provadas. A partir deles, podemos deduzir outras verdades.\\
+Cada área da matemática deve respeitar seus próprios axiomas.
+
+\begin{enumerate}
+    \item Coisas iguais às mesmas coisas, são iguais entre si.
+    \[
+    a = b \text{ e } b = c \text{, então } a = c.
+    \]
+    \item Se somarmos ou subtrairmos a mesma quantidade de ambos os lados de uma equação, o resultado será uma equação verdadeira.
+    \[
+    a = b \text{, então } a + c = b + c.
+    \]
+\end{enumerate}
+
+\subsubsection{Frações}
+Todo número escrito como $\frac{a}{b}$ é uma fração.
+
+\begin{enumerate}
+    \item Adição e Subtração de Frações
+    \[
+    \frac{a}{b} \pm \frac{c}{d} = \frac{ad \pm bc}{bd}.
+    \]
+    \item Multiplicação de Frações
+    \[
+    \frac{a}{b} \times \frac{c}{d} = \frac{ac}{bd}.
+    \]
+    \item Divisão de Frações
+    \[
+    \frac{a}{b} \div \frac{c}{d} = \frac{a}{b} \times \frac{d}{c}.
+    \]
+    \[
+    Prova:
+        \frac{a}{b} \div \frac{c}{d}
+        = \frac{a}{b} \times d \times \frac{1}{c} \div \frac{c}{d} \times d \times \frac{1}{c}
+        = \frac{ad}{bc}
+    \]
+\end{enumerate}
+
+\clearpage
+
+\subsection{Fatoração e Manipulações Algébricas}
+\subsubsection{Axiomas Adição e Subtração}
+\begin{enumerate}
+    \item Comutatividade
+    \[
+    a + b = b + a.
+    \]
+    \item Associatividade
+    \[
+    a + (b + c) = (a + b) + c.
+    \]
+    \item Elemento Neutro
+    \[
+    a + 0 = a.
+    \]
+    \item Elemento Oposto
+    \[
+    a + (-a) = 0.
+    \]
+\end{enumerate}
+
+\subsubsection{Axiomas Multiplicação e Divisão}
+\begin{enumerate}
+    \item Comutatividade
+    \[
+    a \times b = b \times a.
+    \]
+    \item Associatividade
+    \[
+    a \times (b \times c) = (a \times b) \times c.
+    \]
+    \item Elemento Neutro
+    \[
+    a \times 1 = a.
+    \]
+    \item Elemento Oposto
+    \[
+    a \times \frac{1}{a} = 1.
+    \]
+\end{enumerate}
+
+\subsubsection{Fatoração}
+\begin{enumerate}
+    \item
+    \[
+        a(b+c) = ab + ac.
+    \]
+    \item
+    \[
+    (a+b)^2 = a^2 + 2ab + b^2.
+    \]
+    \item
+    \[
+        (a-b)^2 = a^2 - 2ab + b^2.
+    \]    
+    \item
+    \[
+    a^2 - b^2 = (a + b)(a - b).
+    \]
+    \item
+    \[
+    a^3 + b^3 = (a + b)(a^2 - ab + b^2).
+    \]
+    \item
+    \[
+    a^3 - b^3 = (a - b)(a^2 + ab + b^2).
+    \]
+\end{enumerate}
+
+\subsubsection{Manipulações de Equações}
+\begin{enumerate}
+    \item Multiplicar por um fator
+    \begin{enumerate}
+        \item 
+        \[ 
+        5x + y = 3 \quad \times 10
+        \]
+        \item 
+        \[
+        50x + 10y = 30
+        \]
+        \item 
+        \[
+        10x + 2y = 6 \quad \div 5
+        \]
+    \end{enumerate}
+\end{enumerate} % Finaliza a enumeração para "Multiplicar por um fator"
+
+% Começa um novo item para "Somar/Subtrair Equações"
+\item Somar/Subtrair Equações
+\begin{align*}
+    \left\{
+    \begin{array}{rcl}
+        5x + 2y &=& 3 \\
+        3x - 4y &=& 5
+    \end{array}
+    \right.
+\end{align*}
+
+\end{document}
+
